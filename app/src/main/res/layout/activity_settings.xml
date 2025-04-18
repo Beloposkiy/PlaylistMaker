@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/default_text_size"
+        android:textStyle="bold"
+        android:text="@string/settings"
+        android:layout_marginTop="14dp"
+        android:layout_marginHorizontal="@dimen/default_horizontal_padding"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="21dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingStart="@dimen/default_horizontal_padding"
+            android:paddingEnd="@dimen/default_horizontal_padding">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/night_theme"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/black"
+                android:gravity="center_vertical|start" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/theme_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumbTint="@color/grey"
+                android:trackTint="@color/grey" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/share_button"
+            layout="@layout/settings_layout_row_button" />
+
+        <include
+            android:id="@+id/support_button"
+            layout="@layout/settings_layout_row_button" />
+
+        <include
+            android:id="@+id/agreement_button"
+            layout="@layout/settings_layout_row_button" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33000000" />
+
+    <LinearLayout
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/search_tab_bar_button"
+            layout="@layout/settings_layout_tab_bar_button"/>
+
+        <include
+            android:id="@+id/media_library_tab_bar_button"
+            layout="@layout/settings_layout_tab_bar_button"/>
+
+        <include
+            android:id="@+id/settings_tab_bar_button"
+            layout="@layout/settings_layout_tab_bar_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>
