@@ -9,88 +9,51 @@
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground">
 
-    <TextView
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/settings_toolbar_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="@dimen/default_text_size"
-        android:textStyle="bold"
-        android:text="@string/settings"
-        android:layout_marginTop="14dp"
-        android:layout_marginHorizontal="@dimen/default_horizontal_padding"/>
+        app:title="@string/settings"
+        app:titleTextColor="@color/black"
+        app:titleTextAppearance="@style/ToolbarTitleText"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="21dp">
+        android:paddingHorizontal="@dimen/default_horizontal_padding"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="24dp"
+        >
 
-        <LinearLayout
+        <com.google.android.material.switchmaterial.SwitchMaterial
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:background="@color/white"
-            android:paddingStart="@dimen/default_horizontal_padding"
-            android:paddingEnd="@dimen/default_horizontal_padding">
+            android:layout_height="wrap_content"
+            android:text="@string/night_theme"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/black"
+            android:paddingVertical="21dp"/>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/night_theme"
-                android:textSize="@dimen/small_text_size"
-                android:textColor="@color/black"
-                android:gravity="center_vertical|start" />
+        <com.google.android.material.textview.MaterialTextView
+            android:text="@string/share"
+            android:drawableEnd="@drawable/ic_share"
+            style="@style/MaterialTextView"/>
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/theme_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:thumbTint="@color/grey"
-                android:trackTint="@color/grey" />
-        </LinearLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:text="@string/support"
+            android:drawableEnd="@drawable/ic_support"
+            style="@style/MaterialTextView"/>
 
-        <include
-            android:id="@+id/share_button"
-            layout="@layout/settings_layout_row_button" />
-
-        <include
-            android:id="@+id/support_button"
-            layout="@layout/settings_layout_row_button" />
-
-        <include
-            android:id="@+id/agreement_button"
-            layout="@layout/settings_layout_row_button" />
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#33000000" />
-
-    <LinearLayout
-        android:id="@+id/tab_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <include
-            android:id="@+id/search_tab_bar_button"
-            layout="@layout/settings_layout_tab_bar_button"/>
-
-        <include
-            android:id="@+id/media_library_tab_bar_button"
-            layout="@layout/settings_layout_tab_bar_button"/>
-
-        <include
-            android:id="@+id/settings_tab_bar_button"
-            layout="@layout/settings_layout_tab_bar_button"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:text="@string/user_agreement"
+            android:drawableEnd="@drawable/ic_arrow_forward"
+            style="@style/MaterialTextView"/>
 
     </LinearLayout>
 
