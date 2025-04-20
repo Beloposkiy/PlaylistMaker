@@ -37,8 +37,9 @@
             android:layout_height="wrap_content"
             android:text="@string/night_theme"
             android:textSize="@dimen/small_text_size"
-            android:textColor="@color/black"
-            android:paddingVertical="21dp"/>
+            android:paddingVertical="21dp"
+            app:thumbTint="@color/switch_thumb_color"
+            app:trackTint="@color/switch_track_color"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:text="@string/share"
