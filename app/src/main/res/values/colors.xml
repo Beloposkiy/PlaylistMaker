@@ -18,5 +18,6 @@
     <color name="edit_text_background">@color/grey_light</color>
     <color name="edit_text_hint">@color/grey</color>
     <color name="toolbar_navigation">@color/black</color>
+    <color name="icon_color">@color/grey</color>
 
 </resources>

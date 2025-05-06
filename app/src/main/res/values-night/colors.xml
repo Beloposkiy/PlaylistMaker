@@ -5,5 +5,5 @@
     <color name="edit_text_background">@color/white</color>
     <color name="edit_text_hint">@color/black</color>
     <color name="toolbar_navigation">@color/white</color>
-
+    <color name="icon_color">@color/white</color>
 </resources>

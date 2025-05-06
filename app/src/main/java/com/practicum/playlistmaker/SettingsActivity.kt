@@ -16,6 +16,14 @@ import com.google.android.material.textview.MaterialTextView
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val prefs = getSharedPreferences("settings", MODE_PRIVATE)
+        val isDarkTheme = prefs.getBoolean("dark_theme", false)
+
+        if (isDarkTheme) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
@@ -34,9 +42,15 @@ class SettingsActivity : AppCompatActivity() {
         val supportEmailSubject = Uri.encode(getString(R.string.support_subject))
         val supportEmailText = Uri.encode(getString(R.string.support_text))
 
-        val themeSwitcher = findViewById<SwitchMaterial>(R.id.switch_theme)
+        val themeSwitch = findViewById<SwitchMaterial>(R.id.switch_theme)
 
-        themeSwitcher.setOnCheckedChangeListener { _, isChecked ->
+        themeSwitch.isChecked = isDarkTheme
+
+        themeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            val editor = prefs.edit()
+            editor.putBoolean("dark_theme", isChecked)
+            editor.apply()
+
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
             } else {
