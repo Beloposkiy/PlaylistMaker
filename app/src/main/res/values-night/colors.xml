@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="main_background_color">@color/black</color>
-    <color name="settings_background_color">@color/black</color>
+    <color name="all_layout_background_color">@color/black</color>
+    <color name="edit_text_background">@color/white</color>
+    <color name="edit_text_hint">@color/black</color>
+    <color name="toolbar_navigation">@color/white</color>
 
 </resources>

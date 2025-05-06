@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/settings_background_color"
+    android:background="@color/all_layout_background_color"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
@@ -14,12 +14,11 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/settings_toolbar_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         app:title="@string/settings"
         app:titleTextAppearance="@style/ToolbarTitleText"
         app:navigationIcon="@drawable/ic_arrow_back"
-        app:contentInsetStart="0dp"
-        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIconTint="@color/toolbar_navigation"
         />
 
     <LinearLayout
@@ -34,6 +33,7 @@
         >
 
         <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/night_theme"
@@ -41,6 +41,7 @@
             android:paddingVertical="21dp"
             app:thumbTint="@color/switch_thumb_color"
             app:trackTint="@color/switch_track_color"
+            android:fontFamily="@font/ys_display_regular"
             />
 
         <com.google.android.material.textview.MaterialTextView

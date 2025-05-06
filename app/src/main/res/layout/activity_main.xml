@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/activity_main"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/main_background_color"
+    android:orientation="vertical"
     android:paddingHorizontal="@dimen/default_horizontal_padding"
+    android:fitsSystemWindows="true"
     >
 
 
@@ -14,16 +15,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="@string/app_name"
-        app:titleTextColor="@color/white"
         app:titleTextAppearance="@style/ToolbarTitleText"
+        app:titleTextColor="@color/white"
         />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/search_button"
         style="@style/MainMenuButtonStyle"
         android:layout_marginTop="24dp"
-        app:icon="@drawable/ic_search"
         android:text="@string/search"
+        app:icon="@drawable/ic_search"
         app:iconPadding="8dp"
         />
 
@@ -31,8 +32,8 @@
         android:id="@+id/media_library_button"
         style="@style/MainMenuButtonStyle"
         android:layout_marginTop="16dp"
-        app:icon="@drawable/ic_media_library"
         android:text="@string/mediaLibrary"
+        app:icon="@drawable/ic_media_library"
         app:iconPadding="8dp"
         />
 
@@ -41,8 +42,8 @@
         style="@style/MainMenuButtonStyle"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="28dp"
-        app:icon="@drawable/ic_settings"
         android:text="@string/settings"
+        app:icon="@drawable/ic_settings"
         app:iconPadding="8dp"
         />
 
